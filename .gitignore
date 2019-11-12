@@ -1,0 +1,264 @@
+                     &
+./list.h:12:35: note: passing argument to parameter 'head' here
+struct list *reverse(struct list *head);
+                                  ^
+1 error generated.
+make: *** [main.o] Error 1
+Roys-MacBook-Pro:Arista_cq royzhao$ make
+cc -std=c99 -g -Wall   -c -o main.o main.c
+cc   reverse.o main.o   -o reverse
+Undefined symbols for architecture x86_64:
+  "_reverse", referenced from:
+      _main in main.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [reverse] Error 1
+Roys-MacBook-Pro:Arista_cq royzhao$ make
+cc   reverse.o main.o   -o reverse
+Undefined symbols for architecture x86_64:
+  "_reverse", referenced from:
+      _main in main.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [reverse] Error 1
+Roys-MacBook-Pro:Arista_cq royzhao$ clear
+Roys-MacBook-Pro:Arista_cq royzhao$ make
+cc   reverse.o main.o   -o reverse
+Undefined symbols for architecture x86_64:
+  "_reverse", referenced from:
+      _main in main.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [reverse] Error 1
+Roys-MacBook-Pro:Arista_cq royzhao$ make
+cc -std=c99 -g -Wall   -c -o reverse.o reverse.c
+In file included from reverse.c:6:
+./list.h:8:5: error: must use 'struct' tag to refer to type 'list'
+    list *next;
+    ^
+    struct
+./list.h:9:5: error: must use 'struct' tag to refer to type 'list'
+    list *prev;
+    ^
+    struct
+./list.h:12:1: error: must use 'struct' tag to refer to type 'list'
+list *reverse(list *head);
+^
+struct
+./list.h:12:15: error: must use 'struct' tag to refer to type 'list'
+list *reverse(list *head);
+              ^
+              struct
+reverse.c:20:1: error: must use 'struct' tag to refer to type 'list'
+list *reverse(list *head) {
+^
+struct
+reverse.c:20:15: error: must use 'struct' tag to refer to type 'list'
+list *reverse(list *head) {
+              ^
+              struct
+reverse.c:24:5: error: must use 'struct' tag to refer to type 'list'
+    list *iterator = head;
+    ^
+    struct
+reverse.c:25:12: error: use of undeclared identifier 'true'; did you mean
+      'free'?
+    while (true) {
+           ^~~~
+           free
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/malloc/_malloc.h:42:7: note:
+      'free' declared here
+void     free(void *);
+         ^
+reverse.c:25:12: warning: address of function 'free' will always evaluate to
+      'true' [-Wpointer-bool-conversion]
+    while (true) {
+    ~~~~~  ^~~~
+reverse.c:25:12: note: prefix with the address-of operator to silence this
+      warning
+    while (true) {
+           ^
+           &
+reverse.c:26:9: error: must use 'struct' tag to refer to type 'list'
+        list *old_prev = iterator->prev;
+        ^
+        struct
+1 warning and 9 errors generated.
+make: *** [reverse.o] Error 1
+Roys-MacBook-Pro:Arista_cq royzhao$ make
+cc -std=c99 -g -Wall   -c -o reverse.o reverse.c
+In file included from reverse.c:6:
+./list.h:12:1: error: must use 'struct' tag to refer to type 'list'
+list *reverse( list *head);
+^
+struct
+./list.h:12:16: error: must use 'struct' tag to refer to type 'list'
+list *reverse( list *head);
+               ^
+               struct
+reverse.c:20:1: error: must use 'struct' tag to refer to type 'list'
+list *reverse(list *head) {
+^
+struct
+reverse.c:20:15: error: must use 'struct' tag to refer to type 'list'
+list *reverse(list *head) {
+              ^
+              struct
+reverse.c:24:5: error: must use 'struct' tag to refer to type 'list'
+    list *iterator = head;
+    ^
+    struct
+reverse.c:25:12: error: use of undeclared identifier 'true'; did you mean
+      'free'?
+    while (true) {
+           ^~~~
+           free
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/malloc/_malloc.h:42:7: note:
+      'free' declared here
+void     free(void *);
+         ^
+reverse.c:25:12: warning: address of function 'free' will always evaluate to
+      'true' [-Wpointer-bool-conversion]
+    while (true) {
+    ~~~~~  ^~~~
+reverse.c:25:12: note: prefix with the address-of operator to silence this
+      warning
+    while (true) {
+           ^
+           &
+reverse.c:26:9: error: must use 'struct' tag to refer to type 'list'
+        list *old_prev = iterator->prev;
+        ^
+        struct
+1 warning and 7 errors generated.
+make: *** [reverse.o] Error 1
+Roys-MacBook-Pro:Arista_cq royzhao$ make
+cc -std=c99 -g -Wall   -c -o reverse.o reverse.c
+reverse.c:25:12: error: use of undeclared identifier 'true'; did you mean
+      'free'?
+    while (true) {
+           ^~~~
+           free
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/malloc/_malloc.h:42:7: note:
+      'free' declared here
+void     free(void *);
+         ^
+reverse.c:25:12: warning: address of function 'free' will always evaluate to
+      'true' [-Wpointer-bool-conversion]
+    while (true) {
+    ~~~~~  ^~~~
+reverse.c:25:12: note: prefix with the address-of operator to silence this
+      warning
+    while (true) {
+           ^
+           &
+reverse.c:26:9: error: must use 'struct' tag to refer to type 'list'
+        list *old_prev = iterator->prev;
+        ^
+        struct
+1 warning and 2 errors generated.
+make: *** [reverse.o] Error 1
+Roys-MacBook-Pro:Arista_cq royzhao$ make
+cc -std=c99 -g -Wall   -c -o reverse.o reverse.c
+reverse.c:26:9: error: must use 'struct' tag to refer to type 'list'
+        list *old_prev = iterator->prev;
+        ^
+        struct
+1 error generated.
+make: *** [reverse.o] Error 1
+Roys-MacBook-Pro:Arista_cq royzhao$ make
+cc -std=c99 -g -Wall   -c -o reverse.o reverse.c
+cc -std=c99 -g -Wall   -c -o main.o main.c
+main.c:13:4: error: must use 'struct' tag to refer to type 'list'
+   list list;
+   ^
+   struct
+main.c:22:4: error: must use 'struct' tag to refer to type 'element'
+   element field3[NUM];
+   ^
+   struct
+2 errors generated.
+make: *** [main.o] Error 1
+Roys-MacBook-Pro:Arista_cq royzhao$ make clean
+make: *** No rule to make target `clean'.  Stop.
+Roys-MacBook-Pro:Arista_cq royzhao$ ls -lah
+total 48
+drwxr-xr-x@  8 royzhao  staff   256B 11 Nov 18:15 .
+drwx------@ 10 royzhao  staff   320B  8 Nov 16:30 ..
+-rw-rw-rw-@  1 royzhao  staff    79B 11 Nov 18:15 Makefile
+-rw-rw-rw-@  1 royzhao  staff    37B 11 Dec  2015 README
+-rw-rw-rw-@  1 royzhao  staff   277B 11 Nov 18:15 list.h
+-rw-rw-rw-@  1 royzhao  staff   1.9K 11 Nov 18:15 main.c
+-rw-rw-rw-@  1 royzhao  staff   958B 11 Nov 18:15 reverse.c
+-rw-r--r--   1 royzhao  staff   2.5K 11 Nov 18:15 reverse.o
+Roys-MacBook-Pro:Arista_cq royzhao$ rm -rf *.o
+Roys-MacBook-Pro:Arista_cq royzhao$ ls -lah
+total 40
+drwxr-xr-x@  7 royzhao  staff   224B 11 Nov 18:16 .
+drwx------@ 10 royzhao  staff   320B  8 Nov 16:30 ..
+-rw-rw-rw-@  1 royzhao  staff    79B 11 Nov 18:15 Makefile
+-rw-rw-rw-@  1 royzhao  staff    37B 11 Dec  2015 README
+-rw-rw-rw-@  1 royzhao  staff   277B 11 Nov 18:15 list.h
+-rw-rw-rw-@  1 royzhao  staff   1.9K 11 Nov 18:15 main.c
+-rw-rw-rw-@  1 royzhao  staff   958B 11 Nov 18:15 reverse.c
+Roys-MacBook-Pro:Arista_cq royzhao$ make
+cc -std=c99 -g -Wall   -c -o reverse.o reverse.c
+cc -std=c99 -g -Wall   -c -o main.o main.c
+main.c:13:4: error: must use 'struct' tag to refer to type 'list'
+   list list;
+   ^
+   struct
+main.c:22:4: error: must use 'struct' tag to refer to type 'element'
+   element field3[NUM];
+   ^
+   struct
+2 errors generated.
+make: *** [main.o] Error 1
+Roys-MacBook-Pro:Arista_cq royzhao$ ls -lah
+total 48
+drwxr-xr-x@  8 royzhao  staff   256B 11 Nov 18:16 .
+drwx------@ 10 royzhao  staff   320B  8 Nov 16:30 ..
+-rw-rw-rw-@  1 royzhao  staff    79B 11 Nov 18:15 Makefile
+-rw-rw-rw-@  1 royzhao  staff    37B 11 Dec  2015 README
+-rw-rw-rw-@  1 royzhao  staff   277B 11 Nov 18:15 list.h
+-rw-rw-rw-@  1 royzhao  staff   1.9K 11 Nov 18:16 main.c
+-rw-rw-rw-@  1 royzhao  staff   958B 11 Nov 18:15 reverse.c
+-rw-r--r--   1 royzhao  staff   2.5K 11 Nov 18:16 reverse.o
+Roys-MacBook-Pro:Arista_cq royzhao$ make
+cc -std=c99 -g -Wall   -c -o main.o main.c
+cc   reverse.o main.o   -o reverse
+./reverse
+Success!
+Roys-MacBook-Pro:Arista_cq royzhao$ ./reverse
+Success!
+Roys-MacBook-Pro:Arista_cq royzhao$ ./reverse
+Success!
+Roys-MacBook-Pro:Arista_cq royzhao$ git init
+Initialized empty Git repository in /Users/royzhao/Desktop/Arista_cq/.git/
+Roys-MacBook-Pro:Arista_cq royzhao$ nano .gitignore
+Roys-MacBook-Pro:Arista_cq royzhao$ git add .gitignore
+  GNU nano 2.0.6              File: .gitignore
+
+
+# Created by https://www.gitignore.io/api/c,macos
+# Edit at https://www.gitignore.io/?templates=c,macos
+
+### C ###
+# Prerequisites
+*.d
+
+# Object files
+*.o
+*.ko
+*.obj
+*.elf
+
+# Linker output
+*.ilk
+*.map
+*.exp
+
+# Precompiled Headers
+                               [ Read 87 lines ]
+^G Get Help  ^O WriteOut  ^R Read File ^Y Prev Page ^K Cut Text  ^C Cur Pos
+^X Exit      ^J Justify   ^W Where Is  ^V Next Page ^U UnCut Text^T To Spell
